@@ -1,0 +1,39 @@
+<congig>
+    <!--<menu>-->
+    <!--<simpleslider translate="title" module="adminhtml">-->
+    <!--<title>My Sliders</title>-->
+    <!--<sort_order>100</sort_order>-->
+    <!--<children>-->
+    <!--<slider translate="title" module="ma_simpleslider">-->
+    <!--&lt;!&ndash; slider -имя класса-контроллера берется из config.xml(-->
+    <!--<admin> <modules><slider>Путь к контроллеру</slider></modules> &ndash;&gt;-->
+    <!--<title>List of Sliders</title>-->
+    <!--<sort_order>0</sort_order>-->
+    <!--<action>adminhtml/slider/index</action>-->
+    <!--</slider>-->
+    <!--</children>-->
+    <!--</simpleslider>-->
+    <!--</menu>-->
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                  <ma_simpleslider translate="title" module="ma_simpleslider">
+                                                <!-- slider -имя класса-контроллера берется из config.xml(
+                                              <admin> <modules><slider>Путь к контроллеру</slider></modules> -->
+                                                <title>SimpleSliders</title>
+                                                <sort_order>0</sort_order>
+                                  </ma_simpleslider>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</congig>

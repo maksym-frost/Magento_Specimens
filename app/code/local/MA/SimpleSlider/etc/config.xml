@@ -6,6 +6,13 @@
         </MA_SimpleSlider>
     </modules>
     <global>
+
+        <helpers>
+            <ma_simpleslider>
+                <class>MA_SimpleSlider_Helper</class>
+            </ma_simpleslider>
+        </helpers>
+
         <blocks>
             <ma_simpleslider>
                 <class>MA_SimpleSlider_Block</class>
@@ -32,16 +39,6 @@
 
 
         <resources>
-            <!--<simpleslider_write>-->
-                <!--<connection>-->
-                    <!--<use>core_write</use>-->
-                <!--</connection>-->
-            <!--</simpleslider_write>-->
-            <!--<simpleslider_read>-->
-                <!--<conneciton>-->
-                    <!--<use>core_read</use>-->
-                <!--</conneciton>-->
-            <!--</simpleslider_read>-->
             <simpleslider_setup>
                 <setup>
                     <module>MA_SimpleSlider</module>
@@ -78,5 +75,15 @@
             </updates>
         </layout>
     </frontend>
+
+<!--Не работает -Должен менять по умолчанию значение в <fields><enabled>(system.xml)-->
+    <default>
+        <ma_simpleslider>
+            <general>
+                <enabled>0</enabled>
+            </general>
+        </ma_simpleslider>
+    </default>
+    <!--Не работает -Должен менять по умолчанию значение в <fields><enabled>(system.xml)-->
 
 </config>
