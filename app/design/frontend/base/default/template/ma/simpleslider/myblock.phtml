@@ -1,0 +1,20 @@
+<?php
+echo $this->myblock();
+?>
+<br>
+<form action="<?=Mage::getUrl('sliders/index/save')?>" method="post">
+    <fieldset>
+        <ul>
+            <li>
+                <label for="name">Name</label>
+                <input type="text" name="name"/>
+                <br>
+                <label for="name">Title</label>
+                <input type="text" name="title"/>
+            </li>
+            <li>
+                <input type="submit" value="Registration"/>
+            </li>
+        </ul>
+    </fieldset>
+</form>

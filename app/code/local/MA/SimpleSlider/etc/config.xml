@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MA_SimpleSlider>
+            <version>0.1.0</version>
+        </MA_SimpleSlider>
+    </modules>
+    <global>
+        <blocks>
+            <ma_simpleslider>
+                <class>MA_SimpleSlider_Block</class>
+            </ma_simpleslider>
+        </blocks>
+
+        <models>
+            <!--Название модели simpleslider-->
+            <simpleslider>
+                <class>MA_SimpleSlider_Model</class>
+                <!-- simpleslider_resource Название Ресурс модели-->
+                <resourceModel>simpleslider_resource</resourceModel>
+            </simpleslider>
+             <!--simpleslider_resource Название Ркесурс модели-->
+            <simpleslider_resource>
+                <class>MA_SimpleSlider_Model_Resource</class>
+                <entities>
+                    <slider>
+                        <table>my_slider</table>
+                    </slider>
+                </entities>
+            </simpleslider_resource>
+        </models>
+
+
+        <resources>
+            <!--<simpleslider_write>-->
+                <!--<connection>-->
+                    <!--<use>core_write</use>-->
+                <!--</connection>-->
+            <!--</simpleslider_write>-->
+            <!--<simpleslider_read>-->
+                <!--<conneciton>-->
+                    <!--<use>core_read</use>-->
+                <!--</conneciton>-->
+            <!--</simpleslider_read>-->
+            <simpleslider_setup>
+                <setup>
+                    <module>MA_SimpleSlider</module>
+                    <!--<class>MA_SimpleSlider_Model_Resource_Setup</class>-->
+                </setup>
+            </simpleslider_setup>
+        </resources>
+
+
+    </global>
+    <frontend>
+        <routers>
+            <!--routerfrontend - имя router(произвольное- оно указывается в layout.xml( <file>ma/simple_slider.xml</file>) ) 
+
+            1. Контроллер вызывается http://magento.com/sliders( sliders- задаю ниже)
+            2. Из /template/../ma/myblock.phtml Вводимые данные отправляются 
+                 в контроллер(делаю в myblock.phtml ->getUrl() на action контроллера)
+            3. В контроллере save() сохраняю данные через $this->getRequest()->getPost() в нужную таблицу.
+        -->
+            <routerfrontend>
+                <use>standard</use>
+                <args>
+                    <module>MA_SimpleSlider</module>
+                    <!--frontName- с него начинается rout в url(затем controller and action)-->
+                    <frontName>sliders</frontName>
+                </args>
+            </routerfrontend>
+        </routers>
+        <layout>
+            <updates>
+                <ma_simpleslider>
+                    <file>ma/simple_slider.xml</file>
+                </ma_simpleslider>
+            </updates>
+        </layout>
+    </frontend>
+
+</config>

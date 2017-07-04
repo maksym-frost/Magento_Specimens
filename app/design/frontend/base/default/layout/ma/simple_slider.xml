@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <cms_index_index>
+        <reference name="content">
+            <block type="ma_simpleslider/awesome_slider" name="slider" template="ma/simpleslider/slider.phtml"></block>
+        </reference>
+    </cms_index_index>
+
+    <routerfrontend_index_index>
+        <reference name="content">
+            <block type="ma_simpleslider/myblock" name="my_block" template="ma/simpleslider/myblock.phtml"></block>
+        </reference>
+    </routerfrontend_index_index>
+
+</layout>
